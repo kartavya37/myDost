@@ -4,6 +4,7 @@ import Home from "./Home";
 import RecipeGenerator from "./recipeMaker/RecipeGenerator";
 import RecipeFinder from "./recipeMaker/RecipeFinder";
 import AppTodo from "./todoList/AppTodo";
+import AppNews from "./news/AppNews";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/generator" element={<RecipeGenerator />} />
         <Route path="/finder" element={<RecipeFinder />} />
         <Route path="/AppTodo" element={<AppTodo />} />
+        <Route path="/news" element={<AppNews />} />
       </Routes>
     </Router>
   );

@@ -25,6 +25,12 @@ function Home() {
                 >
                     🗓️ Todo List
                 </Link>
+                <Link
+                    to="/news"
+                    className="bg-red-500 text-white px-6 py-3 rounded-xl hover:bg-red-600"
+                >
+                    📰 News
+                </Link>
             </div>
         </div>
     );

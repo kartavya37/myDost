@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./Home";
 import RecipeGenerator from "./recipeMaker/RecipeGenerator";
 import RecipeFinder from "./recipeMaker/RecipeFinder";
+import AppTodo from "./todoList/AppTodo";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/generator" element={<RecipeGenerator />} />
         <Route path="/finder" element={<RecipeFinder />} />
+        <Route path="/AppTodo" element={<AppTodo />} />
       </Routes>
     </Router>
   );

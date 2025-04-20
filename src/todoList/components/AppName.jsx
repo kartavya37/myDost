@@ -1,6 +1,9 @@
-
 function AppName() {
-  return <h1 className="font-bold text-[45px] m-[10px] mb-[20px]">TODO App</h1>;
+  return (
+    <h1 className="text-4xl sm:text-5xl font-bold text-center text-purple-400 mt-10 mb-6">
+      TODO App
+    </h1>
+  );
 }
 
 export default AppName;

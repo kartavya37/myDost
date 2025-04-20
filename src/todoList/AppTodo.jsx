@@ -7,12 +7,12 @@ import TodoItemsContextProvider from "./store/todo-items-store";
 function AppTodo() {
   return (
     <TodoItemsContextProvider>
-      <center className="todo-container">
+      <div className="min-h-screen bg-gray-900 text-white px-4 sm:px-8 py-8">
         <AppName />
         <AddTodo />
         <WelcomeMessage></WelcomeMessage>
         <TodoItems></TodoItems>
-      </center>
+      </div>
     </TodoItemsContextProvider>
   );
 }

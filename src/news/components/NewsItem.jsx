@@ -1,27 +1,29 @@
 import React from "react";
 
 const NewsItem = ({ article }) => {
-    return (
-        <div className="card">
+  return (
+    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+      {article.image && ( <img src={article.image} alt={article.title} className="w-full h-60 object-cover"/> )} {/* image */}
 
-            {article.image && (<img src={article.image} className="w-full h-auto object-cover max-h-full" alt={article.title} /> )}
-            
-            <div className="card-body">
+      <div className="p-4 space-y-3">
+        <h2 className="text-xl font-semibold text-white">{article.title}</h2> {/* title */}
 
-                <h5 className="card-title">{article.title}</h5>
-                <p className="card-text text-muted">{article.description}</p>
+        <p className="text-gray-400 text-sm">{article.description}</p> {/* description */}
 
-                <div className="d-flex justify-content-between align-items-center">
+        <div className="flex justify-between items-center mt-4 text-sm">
+          <span className="text-gray-500">
+            {new Date(article.published_at).toLocaleString()} {/* time when news was published */}
+          </span>
 
-                    {/* <small className="text-muted"> {new Date(article.published_at).toLocaleDateString()} </small> */}
-                    <small className="text-muted"> {new Date(article.published_at).toLocaleString()} </small>
-
-                    <a href={article.url} className="btn btn-primary" target="_blank" rel="noopener noreferrer"> Read More </a>
-
-                </div>
-            </div>
+          <a href={article.url} target="_blank" rel="noopener noreferrer" 
+            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium transition-all"
+          >
+            Read More
+          </a>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default NewsItem;

@@ -61,11 +61,7 @@ const TodoItemsContextProvider = ({ children }) => {
 
   return (
     <TodoItemsContext.Provider
-      value={{
-        todoItems,
-        addNewItem,
-        deleteItem,
-      }}
+      value={{ todoItems, addNewItem, deleteItem }}
     >
       {children}
     </TodoItemsContext.Provider>

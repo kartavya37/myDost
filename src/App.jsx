@@ -1,10 +1,19 @@
-import { BsAirplaneEnginesFill } from "react-icons/bs";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./Home";
+import RecipeGenerator from "./recipeMaker/RecipeGenerator";
+import RecipeFinder from "./recipeMaker/RecipeFinder";
+
 function App() {
-  return(
-    <>
-    <BsAirplaneEnginesFill />
-    </>
-  )
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/generator" element={<RecipeGenerator />} />
+        <Route path="/finder" element={<RecipeFinder />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

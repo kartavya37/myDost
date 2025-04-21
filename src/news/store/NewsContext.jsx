@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 
 export const NewsContext = createContext();
-const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+const API_KEY = "bc3f0d41e74d8b126e3bb492ab9b873e";
 
 export const NewsProvider = ({ children }) => {
     const [news, setNews] = useState([]);

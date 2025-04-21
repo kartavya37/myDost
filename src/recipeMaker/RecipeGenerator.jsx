@@ -21,7 +21,7 @@ function RecipeGenerator() {
         <div className={`min-h-screen bg-gray-900 text-black p-6 bg-cover bg-center`} 
             style={{ backgroundImage: recipes.length === 0 ? `url(${bg})` : "none" }}
         >
-            <h2 className="text-3xl font-black  mb-6 text-center flex justify-center items-center gap-2 text-black">
+            <h2 className="text-3xl font-black  mb-6 text-center flex justify-center items-center gap-2 text-white">
                 <IoFastFoodOutline size={30} /> Enter Ingredients {/* using react-icons */}
             </h2>
             

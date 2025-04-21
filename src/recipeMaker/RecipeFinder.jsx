@@ -16,6 +16,7 @@ function RecipeFinder() {
         setRecipes(data.results);
     };
 
+    
     return (
         <div
             className="min-h-screen w-full text-white p-6 bg-gray-900"

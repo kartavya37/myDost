@@ -3,7 +3,7 @@ import { NewsContext } from "../store/NewsContext";
 import NewsItem from "./NewsItem";
 
 const NewsList = () => {
-  const { news, loading } = useContext(NewsContext);
+  const { news, loading, err } = useContext(NewsContext);
 
   if (loading) { // if loading === true return a spinner
     return (
@@ -13,7 +13,11 @@ const NewsList = () => {
     );
   }
 
-  if (!news.length) {  // if length === 0 return a "No news"
+  if (err) {
+    return (<div className="text-center text-red-500 p-4">Error: {err} </div>);
+  }
+
+  if (!news || news.length === 0) {  // if length === 0 return a "No news"
     return <p className="text-center text-gray-400">No news available.</p>;
   }
 

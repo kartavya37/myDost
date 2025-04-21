@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 function RecipeCard({ recipe }) {
     const [details, setDetails] = useState(null);
-    const apiKey = "96c6989d0a044d33b4db8618b422996a";
+    const apiKey = import.meta.env.VITE_RECIPE_API_KEY;
 
+    // get recipe info by ID
     useEffect(() => {
         fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?includeNutrition=true&apiKey=${apiKey}`)
             .then((res) => res.json())

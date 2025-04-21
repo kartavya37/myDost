@@ -7,8 +7,9 @@ function RecipeGenerator() {
     const [input, setInput] = useState("");
     const [recipes, setRecipes] = useState([]);
 
-    const apiKey = "96c6989d0a044d33b4db8618b422996a";
+    const apiKey = import.meta.env.VITE_RECIPE_API_KEY;
 
+    // find by ingredient
     const fetchRecipes = async () => { // API call when click on button
         if (!input.trim()) return; // if quesy contains whitespaces than it will return from here only
         const res = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${input}&number=5&apiKey=${apiKey}`);

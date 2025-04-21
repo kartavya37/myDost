@@ -8,7 +8,7 @@ export const NewsProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://api.mediastack.com/v1/news?countries=in&access_key=${API_KEY}`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.mediastack.com/v1/news?countries=in&access_key=${API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 setNews(data.data); // data.data is a array
